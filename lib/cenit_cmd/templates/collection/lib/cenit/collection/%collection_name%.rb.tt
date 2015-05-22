@@ -25,5 +25,9 @@ module Cenit
     def self.push_sample(model, config)
       Cenit::Client.push(@<%= collection_name %>.sample_model(model).to_json, config)
     end
+
+    def self.import(data)
+      @<%= collection_name %>.import_data(data)
+    end
   end
 end

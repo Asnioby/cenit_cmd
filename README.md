@@ -10,7 +10,7 @@ Cenit is an open source social platform as a service for data and business integ
 
 ## Using cenit cmd
 
-    $ cenit collection foo --source=file.json
+    $ cenit collection foo --source=file.json --create_repo=t --create_gem=f
 
 By default its possible read the options from `./gitconfig`
 

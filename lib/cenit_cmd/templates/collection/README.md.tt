@@ -64,36 +64,26 @@ run `rake console`
 
 Configure your Cenithub Client API
 
-```ruby
-config = {push_url: 'https://www.cenithub.com/api/v1/push',connection_key: 'My Conn Key',connection_token: 'My Conn Token'}
-```
-OR
 
-```ruby
-config = {push_url: 'https://www.cenithub.com/api/v1/push',user_key: 'My User Key',user_token: 'My User Token'}
+```Default Config
+config = {:push_url =>  'https://www.cenithub.com/api/v1/push',:user_key =>  'My User Key',:user_token => 'My User Token'}
 ```
 Show Hash Collection
 
-```ruby
-Cenit::Collection.show_collection(config)
-```
+    $ rake show
 
 Load Shared Collection into CenitHub
 
-```ruby
-Cenit::Collection.push_collection(config)
-```
+    $ rake push
 
 Setup Shared Collection into CenitHub
 
-```ruby
-Cenit::Collection.pull_collection(parameters,config)
-```
+    $ rake pull
+
 Push sample data into Cenithub
 
-```ruby
-Cenit::Collection.push_sample([model_name],config)
-```
+    $ rake push_sample
+
 ## Hello, rake tasks
 
 Beyond just editing source code, you'll be interacting with your gem using `rake` a lot. To see all the tasks available with a brief description, you can run:
